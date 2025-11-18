@@ -304,7 +304,7 @@ function MisTareasLayout({ goTo }) {
   const tareas = [
     {
       title: "Tarea 01 - Sitio de e-commerce accesible",
-      url: "https://daniellesq.github.io/Portfolio/",
+      url: "https://daniellesq.github.io/Ecommerce/",
     },
     {
       title: "Tarea 02 - Mi Red social",
