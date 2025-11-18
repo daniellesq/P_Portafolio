@@ -304,7 +304,7 @@ function MisTareasLayout({ goTo }) {
   const tareas = [
     {
       title: "Tarea 01 - Sitio de e-commerce accesible",
-      url: "https://daniellesq.github.io/Ecommerce/",
+      url: "https://daniellesq.github.io/Ecommerce",
     },
     {
       title: "Tarea 02 - Mi Red social",
@@ -361,7 +361,7 @@ function MisEjerciciosLayout({ goTo }) {
   const ejercicios = [
     {
       title: "Ejercicio 01 - Formulario de Registro",
-      urñ: "https://daniellesq.github.io/Form_Inscripcion/",
+      url: "https://daniellesq.github.io/Form_Inscripcion/",
     },
     {
       title: "Ejercicio 02 - Animación CSS",
