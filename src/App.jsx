@@ -99,9 +99,9 @@ export default function App() {
 
             <div className="mt-6 hidden text-xs text-slate-500 md:block">
               <p className="font-mono uppercase tracking-[0.2em] text-slate-600">
-                HOLAAA
+                QUE PONGO AQUI
               </p>
-              <p className="mt-1">Portafolio basado en layouts animados.</p>
+              <p className="mt-1">vjreibveirhbvkdfhwiufhcvbs.</p>
             </div>
           </aside>
 
@@ -295,17 +295,14 @@ function MisTareasLayout({ goTo }) {
   const tareas = [
     {
       title: "Tarea 01 - Sitio de e-commerce accesible",
-      level: "Básico",
       url: "https://daniellesq.github.io/Ecommerce/", 
     },
     {
       title: "Tarea 02 - Mi Red social",
-      level: "Intermedio",
       url: "https://daniellesq.github.io/Red-social---HTML/index.html", 
     },
     {
       title: "Tarea 03 - Cheat Sheet",
-      level: "Intermedio",
       url: "https://daniellesq.github.io/Acordeon-HTML/",
     },
   ];
@@ -327,9 +324,6 @@ function MisTareasLayout({ goTo }) {
             <span className="text-sm font-semibold text-slate-100">
               {t.title}
             </span>
-            <span className="mt-1 text-[11px] text-slate-400">
-              Nivel: {t.level}
-            </span>
 
             {t.url ? (
               <a
@@ -350,8 +344,7 @@ function MisTareasLayout({ goTo }) {
       </div>
 
       <p className="text-[11px] text-slate-300">
-        Aquí podrías enlazar a repos, sandboxes o páginas con enunciados de
-        ejercicios.
+        Hola.
       </p>
     </div>
   );
@@ -364,27 +357,22 @@ function MisEjerciciosLayout({ goTo }) {
   const ejercicios = [
     {
       title: "Ejercicio 01 - Formulario de Registro",
-      level: "Básico",
       url: "https://daniellesq.github.io/Portfolio/"
     },
     {
       title: "Ejercicio 02 - Animación CSS",
-      level: "Intermedio",
       url: "https://daniellesq.github.io/AnimacionCSS/"
     },
     {
       title: "Ejercicio 03 - Escapa de Beyonce",
-      level: "Intermedio",
       url: "https://daniellesq.github.io/JuegoBeyonce/",
     },
     {
       title: "Ejercicio 04 - Formulario CRUD",
-      level: "Avanzado",
       url: "https://daniellesq.github.io/CRUD/"
     },
     {
       title: "Ejercicio 05 - Tic Tac Toe",
-      level: "Avanzado",
       url: "https://daniellesq.github.io/Tic-Tac-Toe/"
     },
   ];
@@ -393,7 +381,7 @@ function MisEjerciciosLayout({ goTo }) {
     <div className="flex h-full flex-col gap-4 rounded-2xl border border-violet-500/30 bg-violet-950/30 p-6">
       <LayoutHeader
         title="Mis ejercicios"
-        subtitle="Prácticas para mejorar tus skills."
+        subtitle="Listado de mis ejercicios."
         onBack={() => goTo(LAYOUTS.HOME)}
       />
 
@@ -405,9 +393,6 @@ function MisEjerciciosLayout({ goTo }) {
           >
             <span className="text-sm font-semibold text-slate-100">
               {e.title}
-            </span>
-            <span className="mt-1 text-[11px] text-slate-400">
-              Nivel: {e.level}
             </span>
              
              {e.url ? (
@@ -429,8 +414,7 @@ function MisEjerciciosLayout({ goTo }) {
       </div>
 
       <p className="text-[11px] text-slate-300">
-        Aquí podrías enlazar a repos, sandboxes o páginas con enunciados de
-        ejercicios.
+        No se que poner.
       </p>
     </div>
   );
