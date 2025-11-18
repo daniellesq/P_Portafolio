@@ -40,13 +40,13 @@ export default function App() {
   const goTo = (layout) => setCurrentLayout(layout);
 
   return (
-    <div className="min-h-screen bg-[#050816] text-slate-200">
+    <div className="min-h-screen bg-[#050013] text-slate-200">
       {/* Contenedor principal */}
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-4 sm:px-8 sm:py-6">
         {/* Top bar */}
         <header className="flex items-center justify-between border-b border-white/5 pb-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#64ffda]/10 text-[#64ffda] text-sm font-bold">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#e879f9]/15 text-[#e879f9] text-sm font-bold">
               DA
             </div>
             <div>
@@ -57,10 +57,10 @@ export default function App() {
           </div>
 
           <div className="hidden items-center gap-2 text-xs font-mono text-slate-400 sm:flex">
-            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
             <span>
               Layout actual:{" "}
-              <span className="text-[#64ffda]">
+              <span className="text-[#e879f9]">
                 {currentLayout === LAYOUTS.HOME && "Inicio"}
                 {currentLayout === LAYOUTS.DATOS && "Mis datos"}
                 {currentLayout === LAYOUTS.TAREAS && "Mis tareas"}
@@ -99,9 +99,20 @@ export default function App() {
 
             <div className="mt-6 hidden text-xs text-slate-500 md:block">
               <p className="font-mono uppercase tracking-[0.2em] text-slate-600">
-                QUE PONGO AQUI
+                GITHUB
               </p>
-              <p className="mt-1">vjreibveirhbvkdfhwiufhcvbs.</p>
+
+              <a
+                href="https://github.com/daniellesq"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-1 inline-flex items-center gap-2 text-[11px] text-slate-300 hover:text-[#e879f9]"
+              >
+                <span className="underline underline-offset-2">
+                  github.com/daniellesq
+                </span>
+                <span className="text-xs">↗</span>
+              </a>
             </div>
           </aside>
 
@@ -134,7 +145,7 @@ export default function App() {
         </div>
 
         <footer className="mt-4 border-t border-white/5 pt-3 text-center text-[11px] text-slate-500">
-          Proyecto: Portafolio.
+          Proyecto: Portafolio💼.
         </footer>
       </div>
     </div>
@@ -150,15 +161,13 @@ function NavButton({ label, active, onClick }) {
       className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition
       ${
         active
-          ? "bg-[#64ffda]/10 text-[#64ffda] border border-[#64ffda]/50 shadow-sm"
+          ? "bg-[#e879f9]/15 text-[#e879f9] border border-[#e879f9]/60 shadow-sm"
           : "text-slate-300 hover:bg-white/5"
       }`}
     >
       <span>{label}</span>
       {active && (
-        <span className="text-[10px] font-mono uppercase tracking-widest">
-          {/* ACTIVO */}
-        </span>
+        <span className="text-[10px] font-mono uppercase tracking-widest" />
       )}
     </button>
   );
@@ -172,24 +181,24 @@ function HomeLayout({ goTo }) {
       key: LAYOUTS.DATOS,
       title: "Mis datos",
       description: "Información personal, contacto, resumen estudiantil.",
-      accent: "bg-sky-500/30",
+      accent: "bg-fuchsia-500/30",
     },
     {
       key: LAYOUTS.TAREAS,
       title: "Mis tareas",
-      description: "Lista de pendientes, cosas por hacer, estado actual.",
-      accent: "bg-amber-500/30",
+      description: "Lista de tareas realizadas durante el semestre de Diseño Web.",
+      accent: "bg-violet-500/30",
     },
     {
       key: LAYOUTS.EJERCICIOS,
       title: "Mis ejercicios",
-      description: "Prácticas de código, retos y mini proyectos.",
-      accent: "bg-violet-500/30",
+      description: "Lista de ejercicios realizados durante el semestre de Diseño Web.",
+      accent: "bg-purple-500/30",
     },
   ];
 
   return (
-    <div className="flex h-full flex-col gap-6 rounded-2xl border border-white/5 bg-gradient-to-br from-[#050816] via-[#050816] to-[#020414] p-6">
+    <div className="flex h-full flex-col gap-6 rounded-2xl border border-fuchsia-500/30 bg-gradient-to-br from-[#09001c] via-[#050013] to-[#050013] p-6">
       <div>
         <h1 className="text-2xl font-semibold text-slate-100 sm:text-3xl">
           HOLAAA 👨‍💻
@@ -204,18 +213,18 @@ function HomeLayout({ goTo }) {
           <button
             key={card.key}
             onClick={() => goTo(card.key)}
-            className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-4 text-left shadow-sm transition hover:-translate-y-1 hover:border-[#64ffda]/60 hover:bg-white/10"
+            className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-4 text-left shadow-sm transition hover:-translate-y-1 hover:border-[#e879f9]/70 hover:bg-white/10"
           >
             <div
               className={`mb-3 inline-flex h-7 w-7 items-center justify-center rounded-xl text-xs font-mono uppercase tracking-[0.2em] text-slate-200 ${card.accent}`}
             >
               Go
             </div>
-            <h2 className="text-lg font-semibold text-slate-100 group-hover:text-[#64ffda]">
+            <h2 className="text-lg font-semibold text-slate-100 group-hover:text-[#e879f9]">
               {card.title}
             </h2>
             <p className="mt-2 text-xs text-slate-400">{card.description}</p>
-            <span className="mt-4 text-[11px] font-mono text-[#64ffda] opacity-80 group-hover:opacity-100">
+            <span className="mt-4 text-[11px] font-mono text-[#e879f9] opacity-80 group-hover:opacity-100">
               Da click para acceder a este apartado →
             </span>
           </button>
@@ -229,7 +238,7 @@ function HomeLayout({ goTo }) {
 
 function MisDatosLayout({ goTo }) {
   return (
-    <div className="flex h-full flex-col gap-4 rounded-2xl border border-blue-500/30 bg-blue-950/40 p-6">
+    <div className="flex h-full flex-col gap-4 rounded-2xl border border-fuchsia-500/40 bg-fuchsia-950/30 p-6">
       <LayoutHeader
         title="Mis datos"
         subtitle="Información personal y perfil."
@@ -237,7 +246,7 @@ function MisDatosLayout({ goTo }) {
       />
 
       <div className="grid gap-4 md:grid-cols-2">
-        <div className="space-y-3 rounded-xl bg-black/20 p-4">
+        <div className="space-y-3 rounded-xl bg-black/30 p-4">
           <h3 className="text-sm font-semibold text-slate-100">
             Información básica
           </h3>
@@ -257,7 +266,7 @@ function MisDatosLayout({ goTo }) {
           </ul>
         </div>
 
-        <div className="space-y-3 rounded-xl bg-black/20 p-4">
+        <div className="space-y-3 rounded-xl bg-black/30 p-4">
           <h3 className="text-sm font-semibold text-slate-100">
             Stack principal
           </h3>
@@ -265,7 +274,7 @@ function MisDatosLayout({ goTo }) {
             {["React", "Vite", "TailwindCSS", "JavaScript", "Git"].map((t) => (
               <span
                 key={t}
-                className="rounded-full bg-blue-500/20 px-3 py-1 border border-blue-400/40"
+                className="rounded-full bg-fuchsia-500/20 px-3 py-1 border border-fuchsia-400/60"
               >
                 {t}
               </span>
@@ -273,7 +282,7 @@ function MisDatosLayout({ goTo }) {
           </div>
         </div>
 
-        <div className="md:col-span-2 rounded-xl bg-black/20 p-4">
+        <div className="md:col-span-2 rounded-xl bg-black/30 p-4">
           <h3 className="text-sm font-semibold text-slate-100">
             Resumen corto
           </h3>
@@ -295,11 +304,11 @@ function MisTareasLayout({ goTo }) {
   const tareas = [
     {
       title: "Tarea 01 - Sitio de e-commerce accesible",
-      url: "https://daniellesq.github.io/Ecommerce/", 
+      url: "https://daniellesq.github.io/Portfolio/",
     },
     {
       title: "Tarea 02 - Mi Red social",
-      url: "https://daniellesq.github.io/Red-social---HTML/index.html", 
+      url: "https://daniellesq.github.io/Red-social---HTML/index.html",
     },
     {
       title: "Tarea 03 - Cheat Sheet",
@@ -308,10 +317,10 @@ function MisTareasLayout({ goTo }) {
   ];
 
   return (
-    <div className="flex h-full flex-col gap-4 rounded-2xl border border-violet-500/30 bg-violet-950/30 p-6">
+    <div className="flex h-full flex-col gap-4 rounded-2xl border border-purple-500/40 bg-purple-950/40 p-6">
       <LayoutHeader
         title="Mis tareas"
-        subtitle="Listado de tareas de la materia."
+        subtitle="Listado de tareas."
         onBack={() => goTo(LAYOUTS.HOME)}
       />
 
@@ -319,7 +328,7 @@ function MisTareasLayout({ goTo }) {
         {tareas.map((t, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-xl bg-black/25 p-4 text-xs text-slate-200"
+            className="flex flex-col rounded-xl bg-black/35 p-4 text-xs text-slate-200"
           >
             <span className="text-sm font-semibold text-slate-100">
               {t.title}
@@ -330,26 +339,21 @@ function MisTareasLayout({ goTo }) {
                 href={t.url}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-3 inline-flex w-fit items-center rounded-full border border-violet-400/60 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-violet-200 transition hover:bg-violet-500/15"
+                className="mt-3 inline-flex w-fit items-center rounded-full border border-purple-400/70 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-purple-200 transition hover:bg-purple-500/20"
               >
                 VER TAREA
               </a>
             ) : (
-              <button className="mt-3 inline-flex w-fit items-center rounded-full border border-violet-400/60 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-violet-200 transition hover:bg-violet-500/15">
+              <button className="mt-3 inline-flex w-fit items-center rounded-full border border-purple-400/70 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-purple-200 transition hover:bg-purple-500/20">
                 VER TAREA
               </button>
             )}
           </div>
         ))}
       </div>
-
-      <p className="text-[11px] text-slate-300">
-        Hola.
-      </p>
     </div>
   );
 }
-
 
 /* ------------------------- MIS EJERCICIOS LAYOUT ------------------------- */
 
@@ -357,11 +361,11 @@ function MisEjerciciosLayout({ goTo }) {
   const ejercicios = [
     {
       title: "Ejercicio 01 - Formulario de Registro",
-      url: "https://daniellesq.github.io/Portfolio/"
+      urñ: "https://daniellesq.github.io/Form_Inscripcion/",
     },
     {
       title: "Ejercicio 02 - Animación CSS",
-      url: "https://daniellesq.github.io/AnimacionCSS/"
+      url: "https://daniellesq.github.io/AnimacionCSS/",
     },
     {
       title: "Ejercicio 03 - Escapa de Beyonce",
@@ -378,10 +382,10 @@ function MisEjerciciosLayout({ goTo }) {
   ];
 
   return (
-    <div className="flex h-full flex-col gap-4 rounded-2xl border border-violet-500/30 bg-violet-950/30 p-6">
+    <div className="flex h-full flex-col gap-4 rounded-2xl border border-purple-500/40 bg-purple-950/40 p-6">
       <LayoutHeader
         title="Mis ejercicios"
-        subtitle="Listado de mis ejercicios."
+        subtitle="Listado de ejercicios."
         onBack={() => goTo(LAYOUTS.HOME)}
       />
 
@@ -389,38 +393,34 @@ function MisEjerciciosLayout({ goTo }) {
         {ejercicios.map((e, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-xl bg-black/25 p-4 text-xs text-slate-200"
+            className="flex flex-col rounded-xl bg-black/35 p-4 text-xs text-slate-200"
           >
             <span className="text-sm font-semibold text-slate-100">
               {e.title}
             </span>
-             
-             {e.url ? (
+
+            {e.url ? (
               <a
                 href={e.url}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-3 inline-flex w-fit items-center rounded-full border border-violet-400/60 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-violet-200 transition hover:bg-violet-500/15"
+                className="mt-3 inline-flex w-fit items-center rounded-full border border-purple-400/70 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-purple-200 transition hover:bg-purple-500/20"
               >
-                Ver Ejercicio
+                Ver detalle
               </a>
             ) : (
-            <button className="mt-3 inline-flex w-fit items-center rounded-full border border-violet-400/60 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-violet-200 transition hover:bg-violet-500/15">
-              Ver Ejercicio
-            </button>
+              <button className="mt-3 inline-flex w-fit items-center rounded-full border border-purple-400/70 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-purple-200 transition hover:bg-purple-500/20">
+                Ver detalle
+              </button>
             )}
           </div>
         ))}
       </div>
-
-      <p className="text-[11px] text-slate-300">
-        No se que poner.
-      </p>
     </div>
   );
 }
 
-// HEADER LAYOUT
+/* ----------------------------- HEADER LAYOUT ----------------------------- */
 
 function LayoutHeader({ title, subtitle, onBack }) {
   return (
@@ -433,7 +433,7 @@ function LayoutHeader({ title, subtitle, onBack }) {
       </div>
       <button
         onClick={onBack}
-        className="inline-flex items-center rounded-full border border-white/20 bg-black/20 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-slate-200 transition hover:bg-white/10"
+        className="inline-flex items-center rounded-full border border-white/25 bg-black/30 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.2em] text-slate-200 transition hover:bg-white/10"
       >
         ← Volver al inicio
       </button>
