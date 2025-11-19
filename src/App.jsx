@@ -304,14 +304,17 @@ function MisTareasLayout({ goTo }) {
   const tareas = [
     {
       title: "Tarea 01 - Sitio de e-commerce accesible",
+      description: "Un sitio de ecommerce implementando las buenas practicas del diseño web y accesibilidad para personas con capacidades diferentes, como discapacidad visual.",
       url: "https://daniellesq.github.io/Ecommerce",
     },
     {
       title: "Tarea 02 - Mi Red social",
+      description: "Una red social con responsividad para los usuarios.",
       url: "https://daniellesq.github.io/Red-social---HTML/index.html",
     },
     {
       title: "Tarea 03 - Cheat Sheet",
+      description: "Acordeon sobre los principales elementos de HTML con ejemplos.",
       url: "https://daniellesq.github.io/Acordeon-HTML/",
     },
   ];
@@ -332,6 +335,9 @@ function MisTareasLayout({ goTo }) {
           >
             <span className="text-sm font-semibold text-slate-100">
               {t.title}
+            </span>
+            <span className="mt-1 text-[11px] text-slate-400">
+              Acerca: {t.description}
             </span>
 
             {t.url ? (
@@ -361,22 +367,27 @@ function MisEjerciciosLayout({ goTo }) {
   const ejercicios = [
     {
       title: "Ejercicio 01 - Formulario de Registro",
+      description: "Formulario para el ingreso de usuarios conectado a una api usando el método post.",
       url: "https://daniellesq.github.io/Form_Inscripcion/",
     },
     {
       title: "Ejercicio 02 - Animación CSS",
+      description: "Una animación para explorar distintas posibilidades que existen con el CSS",
       url: "https://daniellesq.github.io/AnimacionCSS/",
     },
     {
       title: "Ejercicio 03 - Escapa de Beyonce",
+      description: "Un juego divertido implementado en JS que cuenta con diferentes ajustes de dificutad.",
       url: "https://daniellesq.github.io/JuegoBeyonce/",
     },
     {
       title: "Ejercicio 04 - Formulario CRUD",
+      description: "Formulario CRUD en SQL usando operaciones AJAX.",
       url: "https://daniellesq.github.io/CRUD/"
     },
     {
       title: "Ejercicio 05 - Tic Tac Toe",
+      description: "Juego de Gato con diferentes ajustes tanto esteticos como funcionales ajustables a preferencia del jugador.",
       url: "https://daniellesq.github.io/Tic-Tac-Toe/"
     },
   ];
@@ -397,6 +408,9 @@ function MisEjerciciosLayout({ goTo }) {
           >
             <span className="text-sm font-semibold text-slate-100">
               {e.title}
+            </span>
+            <span className="mt-1 text-[11px] text-slate-400">
+              Acerca: {e.description}
             </span>
 
             {e.url ? (
